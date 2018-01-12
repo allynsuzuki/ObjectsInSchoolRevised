@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ObjectsInSchool</title>
+    <script src="objects.js"></script>
+    <script src="actions.js"></script>
+    <script src="data.js"></script>
+    <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+<h1>Organize Your School.</h1>
+
+<input type="text" id="searchStu" value="" size="20">
+<button id="searchBut" onclick="search()">Search</button>
+
+<p>
+<select id="list">
+    <option value="student">Students</option>
+    <option value="teacher">Teachers</option>
+    <option value="section">Sections</option>
+</select>
+
+<button id="viewBtn" onclick="viewInfo()">View Information</button>
+
+<div id="stuInfo"></div>
+
+</p>
+
+<p>
+<button id="addStu" onclick= "addStu()">Add a Student</button>
+
+<div id="students">
+    <p1>First Name:</p1>
+    <input type="text" id="firstName" value="" size="20">
+    <p1>Last Name:</p1>
+    <input type="text" id="lastName" value="" size="20">
+    <p1>Grade:</p1>
+    <input type="number" id="grade" value="" size="20">
+    <p1>Student Id:</p1>
+    <input type="number" id="id" value="" size="20">
+
+    <button id="addStudent" onclick= "addStudent()">Submit</button>
+</div>
+</p>
+
+<p>
+<button id="addTea" onclick="addTea()">Add a Teacher</button>
+<div id="teachers">
+    <p1>First Name:</p1>
+    <input type="text" id="firsName" value="" size="20">
+    <p1>Last Name:</p1>
+    <input type="text" id="lasName" value="" size="20">
+
+    <button id="addTeacher" onclick= "addTeacher()">Submit</button>
+    <div id = "error" ></div>
+</div>
+</p>
+
+<p>
+<button id="addSec" onclick="addSec()">Add a Section</button>
+<div id="sections">
+    <p1>Name:</p1>
+    <input type="text" id="name" value="" size="20">
+    <p1>Teacher:</p1>
+    <input type="text" id="teacher" value="" size="20">
+    <p1>Current Class Size:</p1>
+    <input type="number" id="currentSize" value="" size="20">
+    <button id="addSection" onclick= "addSection()">Submit</button>
+</div>
+</p>
+<p>
+<button id="addStutoSec" onclick= "addStutoSec()">Add a Student to a Section</button>
+<div id="add">
+    <p1>Student ID:</p1>
+    <input type="text" id="name" value="" size="20">
+    <p1>Section:</p1>
+    <button id="addStuu" onclick= "add()">Add Student</button>
+</div>
+</p>
+</body>
+</html>
