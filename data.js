@@ -14,11 +14,11 @@ allTeachers.push(new Teacher("Keldon","Clegg","History"));
 allTeachers.push(new Teacher("Matt","Albinson","CS"));
 allTeachers.push(new Teacher("Carl","Rogers","English"));
 
-allSections.push(new Section("Math 2",30));
-allSections.push(new Section("Math 3",25));
-allSections.push(new Section("US History",30));
-allSections.push(new Section("CS",32));
-allSections.push(new Section("English",30));
+allSections.push(new Section("Math 2", "Albrecht", 30));
+allSections.push(new Section("Math 3", "Baird", 25));
+allSections.push(new Section("US History", "Clegg", 30));
+allSections.push(new Section("CS", "Albinson", 32));
+allSections.push(new Section("English","Jimenez", 30));
 
 var allItems = [allStudents,allTeachers,allSections];
 

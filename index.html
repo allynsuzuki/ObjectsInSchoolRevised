@@ -12,72 +12,102 @@
 
 <h1>Organize Your School.</h1>
 
-<input type="text" id="searchStu" value="" size="20">
-<button id="searchBut" onclick="search()">Search</button>
+
+<div id="options">
+    <input type="text" id="search" value="" size="20" placeholder="Student Name">
+    <button id="searchBut" onclick="search()">Search</button>
+
+    <span id="listStu">
+    <select id="list">
+        <option value="student">Students</option>
+        <option value="teacher">Teachers</option>
+        <option value="section">Sections</option>
+    </select>
+        <button id="viewBtn" onclick="viewInfo()">View Information</button>
+    </span>
+
+    <span>
+    <button id="editStu" onclick="editStu()">Edit Students</button>
+    </span>
+
+    <span>
+    <button id="addTea" onclick="addTea()">Add a Teacher</button>
+    </span>
+
+    <span>
+    <button id="addSec" onclick="addSec()">Add a Section</button>
+    </span>
+</div>
 
 <p>
-<select id="list">
-    <option value="student">Students</option>
-    <option value="teacher">Teachers</option>
-    <option value="section">Sections</option>
-</select>
-
-<button id="viewBtn" onclick="viewInfo()">View Information</button>
-
-<div id="stuInfo"></div>
-
+<div id="div"></div>
 </p>
 
 <p>
-<button id="addStu" onclick= "addStu()">Add a Student</button>
-
 <div id="students">
-    <p1>First Name:</p1>
-    <input type="text" id="firstName" value="" size="20">
-    <p1>Last Name:</p1>
-    <input type="text" id="lastName" value="" size="20">
-    <p1>Grade:</p1>
-    <input type="number" id="grade" value="" size="20">
-    <p1>Student Id:</p1>
-    <input type="number" id="id" value="" size="20">
+    <button id="addStu" onclick="addStu()">Add New Student</button>
+    <button id="stuToSec" onclick="stuToSec()">Add a Student to a Section</button>
+    <button id="stuFromSec" onclick="stuFromSec()">Remove a Student from a Section</button>
+</div>
+</p>
 
+<p>
+<div id="addStudents">
+    <input type="text" id="firstName" onfocus="this.value=''" placeholder="First Name">
+    <input type="text" id="lastName" onfocus="this.value=''" placeholder="Last Name">
+    <input type="number" id="grade" onfocus="this.value=''" placeholder="Grade">
+    <div id = "error1" ></div>
     <button id="addStudent" onclick= "addStudent()">Submit</button>
 </div>
 </p>
 
 <p>
-<button id="addTea" onclick="addTea()">Add a Teacher</button>
 <div id="teachers">
-    <p1>First Name:</p1>
-    <input type="text" id="firsName" value="" size="20">
-    <p1>Last Name:</p1>
-    <input type="text" id="lasName" value="" size="20">
-
+    <input type="text" id="firsName" onfocus="this.value=''" placeholder="First Name">
+    <input type="text" id="lasName" onfocus="this.value=''" placeholder="Last Name">
+    <input type="text" id="subject"  onfocus="this.value=''" placeholder="Subject">
     <button id="addTeacher" onclick= "addTeacher()">Submit</button>
-    <div id = "error" ></div>
+    <div id = "error2" ></div>
+</div>
+</p>
+<p>
+
+<div id="sections">
+    <input type="text" id="name" onfocus="this.value=''" placeholder="Name">
+    <input type="text" id="teacher" onfocus="this.value=''" placeholder="Teacher">
+    <input type="number" id="currentSize" onfocus="this.value=''" placeholder="Current Class Size">
+    <button id="addSection" onclick= "addSection()">Submit</button>
+    <div id = "error3" ></div>
 </div>
 </p>
 
 <p>
-<button id="addSec" onclick="addSec()">Add a Section</button>
-<div id="sections">
-    <p1>Name:</p1>
-    <input type="text" id="name" value="" size="20">
-    <p1>Teacher:</p1>
-    <input type="text" id="teacher" value="" size="20">
-    <p1>Current Class Size:</p1>
-    <input type="number" id="currentSize" value="" size="20">
-    <button id="addSection" onclick= "addSection()">Submit</button>
+<div id="remove">
+
+    <select id="students3" onchange = "sections()">
+    </select>
+
+    <select id="sections3" >
+    </select>
+
+
+    <button id="removeStu" onclick= "remove()">Remove</button>
 </div>
-</p>
-<p>
-<button id="addStutoSec" onclick= "addStutoSec()">Add a Student to a Section</button>
+
+
 <div id="add">
-    <p1>Student ID:</p1>
-    <input type="text" id="name" value="" size="20">
-    <p1>Section:</p1>
-    <button id="addStuu" onclick= "add()">Add Student</button>
+
+    <select id="students2" >
+    </select>
+
+    <select id="sections2" >
+    </select>
+
+
+    <button id="addStuu" onclick= "add()">Add</button>
 </div>
 </p>
+
+
 </body>
 </html>

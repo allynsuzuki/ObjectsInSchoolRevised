@@ -1,41 +1,39 @@
+var id = 0;
 
-function Student(firstName,lastName,grade,studentId) {
+
+function Student(firstName,lastName,grade) {
+    this.id = id++;
     this.firstName = firstName;
     this.lastName = lastName;
     this.grade = grade;
-    this.studentId = studentId;
-
-    /* needs to be implemented
     this.sections = [];
-     */
+    this.addSection = function(section) {
+        this.sections.push(section);
+    }
 }
 
-function Teacher(firstName,lastName,teacherId) {
+function Teacher(firstName,lastName,subject) {
     this.firstName = firstName;
     this.lastName = lastName;
-    this.teacherId = teacherId;
-
-    /* needs to be implemented
-    this.sections = [];
-     */
+    this.subject = subject;
+    this.id = id++;
 }
 
-var sectionId = 0;
-function Section(name,currentSize,teacher) {
+
+function Section(name,teacher, currentSize) {
     this.maxSize = 32;
     this.name = name;
+    this.teacher = teacher;
     this.currentSize = currentSize;
     this.students = [];
+    this.id = id++;
     this.teacher;
-    this.addTeacher = function(teacher) {
-        this.teacher = teacher;
-    };
     this.addStudent = function(student) {
         this.students.push(student);
     };
-    this.removeStudent = function(student) {
-        this.currentSize --;
-    };
+    // this.removeStudent = function(student) {
+    //     this.currentSize --;
+    // };
     this.sectionSeatsRemaining = function() {
         return(this.maxSize - this.currentSize);
     };
